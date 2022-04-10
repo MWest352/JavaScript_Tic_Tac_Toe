@@ -1,0 +1,1 @@
+This is a basic JavaScript Tic Tac Toe game meant to be playable online by one or two people.  There will be a computer mode and a two player mode.
