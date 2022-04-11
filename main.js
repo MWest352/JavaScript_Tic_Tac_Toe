@@ -1,28 +1,28 @@
 
 //Board Creation
+
+
 const makeBoard = (() => {
-  let blockNumber = 0
+  let squareNumber = 1;
 
   const createElement = (() => {
-    let getBoard = document.querySelector(".board")
-    let tagName = "div"
+    let getBoard = document.querySelector('.board');
+    let tagName = 'div';
     let createSquare = document.createElement(tagName);
-  
-    let numberBlock = createSquare.classList.add("Block" + blockNumber);
-    let appendSquare = getBoard.appendChild(createSquare)
+    let addClass = createSquare.classList.add('square');
+    let setId = createSquare.setAttribute('id', 'square#' + squareNumber);
+    let appendSquare = getBoard.appendChild(createSquare);
+  });
 
-    createGrid = () =>{
-      createSquare;
-      numberBlock;
-      appendSquare;
-  }
-  return createGrid();
-  })
-
-  for (i = 0; i < 10; i++){
+  for (i = 1; i <= 9 ; i++){
     createElement();
-    blockNumber++;
-  }
+    squareNumber++;
+  };
 });
 makeBoard();
+
+
+
+
+
 
