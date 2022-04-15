@@ -6,27 +6,41 @@
   }
 
 body {
-  height: 100%;
   margin: 0;
 }
 
-.backgroundImageMain{
+.backgroundImageMain {
   background-image: url("https://cdn.pixabay.com/photo/2015/12/03/08/50/paper-1074131_960_720.jpg");
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-.welcomeSection, .aboutSection, .startButton, .board{
+.welcomeSection, .aboutSection, .startButton, .board {
   font-family: 'Meddon', cursive;
   font-size: large;
   flex-direction: column;
   text-align: center;
 }
 
-.board{
-  flex-direction: column;
-  grid-template-rows: repeat(3, 1fr);
-  height: 100px;
+.board {
+  margin: auto;
+  width: 500px;
+  height: 500px;
   border: solid 2px black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 2px;
 }
+
+.square {
+  height: 160px;
+  width: 160px;
+  border: solid 2px black;
+  flex-direction: column;
+}
+
