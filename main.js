@@ -22,7 +22,10 @@ const makeBoard = (() => {
 makeBoard();
 
 
-
+//Player Factory
+const playerFactory = (name, symbol) => {
+  return {name, symbol};
+};
 
 
 
