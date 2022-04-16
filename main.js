@@ -29,3 +29,27 @@ const playerFactory = (name, symbol) => {
 
 
 
+//Game Logic
+const gameLogic = (() => {
+  let playerOne = playerFactory('Player One', 'X');
+  let playerTwo = playerFactory('Player Two', 'O');
+  let currentPlayer =  playerOne;
+
+
+  //Should return square when clicked
+  const findElement = () => {
+    window.onclick = e =>
+      console.log(e.target.id);
+  };
+
+  //Switches from Player 1 to Player 2
+  function switchPlayer() {
+    if (currentPlayer == playerOne) {
+      currentPlayer = playerTwo;
+    } else if (currentPlayer == playerTwo) {
+      currentPlayer = playerOne;
+    }
+  }
+  
+});
+console.log(gameLogic());
