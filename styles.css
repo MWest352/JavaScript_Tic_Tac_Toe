@@ -16,7 +16,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.welcomeSection, .aboutSection, .startButton, .board {
+.welcomeSection, .aboutSection, .playerUp, .board {
   font-family: 'Meddon', cursive;
   font-size: large;
   flex-direction: column;
@@ -43,4 +43,3 @@ body {
   border: solid 2px black;
   flex-direction: column;
 }
-
