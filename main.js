@@ -1,7 +1,4 @@
-
 //Board Creation
-
-
 const makeBoard = (() => {
   let squareNumber = 1;
 
@@ -21,13 +18,10 @@ const makeBoard = (() => {
 });
 makeBoard();
 
-
 //Player Factory
 const playerFactory = (name, symbol) => {
-  return {name, symbol};
+    return {name, symbol};
 };
-
-
 
 //Game Logic
 const gameLogic = (() => {
@@ -35,13 +29,29 @@ const gameLogic = (() => {
   let playerTwo = playerFactory('Player Two', 'O');
   let currentPlayer =  playerOne;
 
-
-  //Should return square when clicked
-  const findElement = () => {
-    window.onclick = e =>
-      console.log(e.target.id);
+//Return square ID when clicked
+  function findElement() { 
+    document.addEventListener('click', function(e) {
+      if ((e.target.hasAttribute('id')) == true && e.target.textContent == ''){
+        e.target.textContent += currentPlayer.symbol;
+        switchPlayer();
+      } 
+      else {
+        console.log("Falso")
+      }
+    });
   };
-
+  
+  //function to check if element is empty and if so, place player symbol
+  function placeSymbol() {
+    if (e.target.textContent == '') {
+      e.target.textContent += currentPlayer.symbol
+    }
+    else{
+      alert("Invalid move, please try again.");
+    };
+  };
+  
   //Switches from Player 1 to Player 2
   function switchPlayer() {
     if (currentPlayer == playerOne) {
@@ -50,6 +60,10 @@ const gameLogic = (() => {
       currentPlayer = playerOne;
     }
   }
+findElement();
+  
+  
   
 });
-console.log(gameLogic());
+gameLogic();
+
