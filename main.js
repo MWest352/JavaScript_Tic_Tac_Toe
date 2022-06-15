@@ -37,19 +37,9 @@ const gameLogic = (() => {
         switchPlayer();
       } 
       else {
-        console.log("Falso")
+        console.log("Invalid click for gameplay")
       }
     });
-  };
-  
-  //function to check if element is empty and if so, place player symbol
-  function placeSymbol() {
-    if (e.target.textContent == '') {
-      e.target.textContent += currentPlayer.symbol
-    }
-    else{
-      alert("Invalid move, please try again.");
-    };
   };
   
   //Switches from Player 1 to Player 2
