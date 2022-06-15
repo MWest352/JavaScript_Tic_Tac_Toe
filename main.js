@@ -29,7 +29,7 @@ const gameLogic = (() => {
   let playerTwo = playerFactory('Player Two', 'O');
   let currentPlayer =  playerOne;
 
-//Return square ID when clicked
+//Checks for element ID and text content, then places player symbol
   function findElement() { 
     document.addEventListener('click', function(e) {
       if ((e.target.hasAttribute('id')) == true && e.target.textContent == ''){
