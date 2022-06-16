@@ -18,16 +18,20 @@ const makeBoard = (() => {
 });
 makeBoard();
 
+
 //Player Factory
 const playerFactory = (name, symbol) => {
     return {name, symbol};
 };
+
+
 
 //Game Logic
 const gameLogic = (() => {
   let playerOne = playerFactory('Player One', 'X');
   let playerTwo = playerFactory('Player Two', 'O');
   let currentPlayer =  playerOne;
+  switchPlayerText();
 
 //Checks for element ID and text content, then places player symbol
   function findElement() { 
@@ -35,11 +39,17 @@ const gameLogic = (() => {
       if ((e.target.hasAttribute('id')) == true && e.target.textContent == ''){
         e.target.textContent += currentPlayer.symbol;
         switchPlayer();
-      } 
+        switchPlayerText();
+
+      }
       else {
         console.log("Invalid click for gameplay")
       }
     });
+  };
+
+  function switchPlayerText() {
+    document.getElementById("playerUp").textContent = `${currentPlayer.name}, please choose a square.`
   };
   
   //Switches from Player 1 to Player 2
