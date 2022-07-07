@@ -49,6 +49,10 @@ const gameLogic = (() => {
   function switchPlayerText() {
     document.getElementById("playerUp").textContent = `${currentPlayer.name}, please choose a square.`
   };
+
+  function playerTextWin() {
+    document.getElementById("playerUp").textContent = `${currentPlayer.name} wins!`
+  };
   
   //Switches from Player 1 to Player 2
   function switchPlayer() {
