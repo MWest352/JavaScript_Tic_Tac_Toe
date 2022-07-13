@@ -16,12 +16,25 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.welcomeSection, .aboutSection, #playerUp, .board {
+.welcomeSection, .aboutSection, #playerUp, .resetButton, .resetGame, .board {
   font-family: 'Meddon', cursive;
   font-size: large;
   flex-direction: column;
   text-align: center;
 }
+
+.resetGame{
+  cursor: pointer;
+  background: rgba(1, 1, 1, .01);
+  border: none;
+  padding: 2px;
+  
+}
+
+.resetGame:hover{
+    text-decoration:underline;
+}
+
 
 .board {
   margin: auto;
